@@ -1,0 +1,23 @@
+PODS:
+  - KeychainSwift (19.0.0)
+  - UnitTestWithPod (0.0.2):
+    - KeychainSwift (~> 19.0)
+
+DEPENDENCIES:
+  - UnitTestWithPod (from `../UnitTestWithPod/UnitTestWithPod.podspec`)
+
+SPEC REPOS:
+  trunk:
+    - KeychainSwift
+
+EXTERNAL SOURCES:
+  UnitTestWithPod:
+    :podspec: "../UnitTestWithPod/UnitTestWithPod.podspec"
+
+SPEC CHECKSUMS:
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  UnitTestWithPod: fbe85a54abdcfe4b9c59ac779f2c8d37483852c3
+
+PODFILE CHECKSUM: 3047fbfa810ed064f1227c2c7c9267bce9d947b1
+
+COCOAPODS: 1.10.0

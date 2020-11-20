@@ -1,0 +1,6 @@
+module OpenSSL [system][extern_c] {
+    header "../include/openssl/openssl_general.h"
+    link "ssl"
+    link "crypto"
+    export *
+}

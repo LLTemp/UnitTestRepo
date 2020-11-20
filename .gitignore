@@ -1,0 +1,9 @@
+UnitTestWithPod/Pods/
+UnitTestWithPod/build/
+UnitTestWithPod/.idea/
+
+UnitTestWithPodApp/.idea/
+UnitTestWithPodApp/Pods/
+
+
+*.DS_Store
