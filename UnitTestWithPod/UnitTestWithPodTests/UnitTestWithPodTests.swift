@@ -31,7 +31,8 @@ class UnitTestWithPodTests: XCTestCase {
     
     func testOpenSSLFunc() throws {
         let md5 = HelloLib.md5()
-        XCTAssert(md5 == "5d41402abc4b2a76b9719d911017c592")
+        //XCTAssert(md5 == "5d41402abc4b2a76b9719d911017c592")
+        XCTAssert(md5 == "d41402abc4b2a76b9719d911017c592")
     }
 
 }
