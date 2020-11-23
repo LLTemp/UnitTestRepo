@@ -17,6 +17,8 @@ jobs:
     - name: Check OpenSSL
       run: openssl base64 -in ./UnitTestWithPod/Podfile -out base64.txt
 
+    - name: LS
+      run: ls -la ./UnitTestWithPod
 
 #    - name: pod_install_lib
 #      run: pod install --project-directory=./UnitTestWithPod
