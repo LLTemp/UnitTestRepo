@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Check OpenSSL
-      run: openssl base64 -in ./UnitTestWithPod/Podfile -out base64.txt
+      run: openssl base64 -in ./UnitTestWithPod/Podfile -out ./UnitTesetWithPod/base64.txt
 
     - name: LS
       run: ls -la ./UnitTestWithPod
