@@ -30,10 +30,10 @@ jobs:
         path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
 
     - name: ls
-      run: ls -la
+      run: ls -la ./UnitTestWithPod
 
     - name: zip_sdk
-      run: zip -r UnitTestWithPod.framework.zip UnitTestWithPod/UnitTestWithPod.framework
+      run: zip -r UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
 
     - name: ls2
       run: ls -la
