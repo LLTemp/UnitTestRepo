@@ -33,7 +33,7 @@ jobs:
       run: ls -la
 
     - name: zip_sdk
-      run: zip -r UnitTestWithPod.framework.zip . -i ./UnitTestWithPod/UnitTestWithPod.framework
+      run: zip -r UnitTestWithPod.framework.zip UnitTestWithPod/UnitTestWithPod.framework
 
     - name: ls2
       run: ls -la
