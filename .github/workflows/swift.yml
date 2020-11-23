@@ -36,7 +36,7 @@ jobs:
       run: zip -r UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
 
     - name: Archive framework
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist-without-markdown
-          path: ./UnitTestWithPod.framework.zip
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist-without-markdown
+        path: ./UnitTestWithPod.framework.zip
