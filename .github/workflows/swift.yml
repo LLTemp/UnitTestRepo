@@ -14,36 +14,33 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: pod_install_lib
-      run: pod install --project-directory=./UnitTestWithPod
+    - name: Check OpenSSL
+      run: openssl base64 -in ./UnitTestWithPod/Podfile -out base64.txt
+
+
+#    - name: pod_install_lib
+#      run: pod install --project-directory=./UnitTestWithPod
 
 #    - name: pod_install_app
 #      run: pod install --project-directory=./UnitTestWithPodApp
 
-    - name: test_sdk
-      run: xcodebuild test -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
-
-    - name: Archive test report
-      uses: actions/upload-artifact@v2
-      with:
-        name: Coverage
-        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
-
-    - name: Create framework
-      run: xcodebuild -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
-
-    - name: zip_sdk
-      run: zip -r UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
-
-    - name: Archive framework
-      uses: actions/upload-artifact@v2
-      with:
-        name: UnitTestWithPod.framework.zip
-        path: ./UnitTestWithPod.framework.zip
-
-    - name: Upload the artifacts
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        args: './UnitTestWithPod.framework.zip'
+#    - name: test_sdk
+#      run: xcodebuild test -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
+#
+#    - name: Archive test report
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: Coverage
+#        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
+#
+#    - name: Create framework
+#      run: xcodebuild -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
+#
+#    - name: zip_sdk
+#      run: zip -r UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
+#
+#    - name: Archive framework
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: UnitTestWithPod.framework.zip
+#        path: ./UnitTestWithPod.framework.zip
