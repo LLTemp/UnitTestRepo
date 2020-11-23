@@ -23,9 +23,18 @@ jobs:
     - name: test_sdk
       run: xcodebuild test -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
 
-    - name: test_sdk
+    - name: Archive test report
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist-without-markdown
+        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
+
+    - name: ls
       run: ls -la
 
     - name: zip_sdk
-      #run: zip -r UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
       run: zip -r UnitTestWithPod.framework.zip . -i ./UnitTestWithPod/UnitTestWithPod.framework
+
+    - name: ls2
+      run: ls -la
+
