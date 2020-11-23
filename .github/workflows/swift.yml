@@ -26,7 +26,7 @@ jobs:
     - name: Archive test report
       uses: actions/upload-artifact@v2
       with:
-        name: dist-without-markdown
+        name: Coverage
         path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
 
     - name: Create framework
@@ -38,5 +38,12 @@ jobs:
     - name: Archive framework
       uses: actions/upload-artifact@v2
       with:
-        name: dist-without-markdown
+        name: UnitTestWithPod.framework.zip
         path: ./UnitTestWithPod.framework.zip
+
+    - name: Upload the artifacts
+      uses: skx/github-action-publish-binaries@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        args: './UnitTestWithPod.framework.zip'
