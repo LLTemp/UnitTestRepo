@@ -14,40 +14,42 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Test script
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      run: ./test.sh
+#    - name: Test script
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+#      run: ./test.sh
 
-    - name: Test Execution of
-      run: |
-        curl -request GET \
-        --header 'Accept: application/vnd.github.v3+json' \
-        --header "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-        --url https://api.github.com/repos/LLTemp/test_sic_zip/contents/new_one.txt
+#    - name: Test Execution of
+#      run: |
+#        curl -request GET \
+#        --header 'Accept: application/vnd.github.v3+json' \
+#        --header "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+#        --url https://api.github.com/repos/LLTemp/test_sic_zip/contents/new_one.txt
 
 #    - name: pod_install_lib
 #      run: pod install --project-directory=./UnitTestWithPod
 
 
 
-#    - name: pod_install_app
-#      run: pod install --project-directory=./UnitTestWithPodApp
-#
-#    - name: test_sdk
-#      run: xcodebuild test -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
-#
-#    - name: Archive test report
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: Coverage
-#        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
+    - name: pod_install_app
+      run: pod install --project-directory=./UnitTestWithPodApp
 
-#    - name: Create framework
-#      run: xcodebuild -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
-#
-#    - name: zip_sdk
-#      run: zip -r ./UnitTestWithPod/UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
+    - name: test_sdk
+      run: xcodebuild test -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
+
+    - name: Archive test report
+      uses: actions/upload-artifact@v2
+      with:
+        name: Coverage
+        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
+
+    - name: Create framework
+      run: xcodebuild -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
+
+    - name: zip_sdk
+      run: zip -r ./UnitTestWithPod/UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
 
     - name: Upload
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       run: ./upload_to_github.sh
