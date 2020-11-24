@@ -14,18 +14,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Check OpenSSL
-      run: openssl base64 -in ./UnitTestWithPod/Podfile -out ./UnitTesetWithPod/base64.txt
-
-    - name: LS
-      run: ls -la ./UnitTestWithPod
+    - name: JQ install
+      run: brew install -g jq
 
 #    - name: pod_install_lib
 #      run: pod install --project-directory=./UnitTestWithPod
-
+#
 #    - name: pod_install_app
 #      run: pod install --project-directory=./UnitTestWithPodApp
-
+#
 #    - name: test_sdk
 #      run: xcodebuild test -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
 #
@@ -46,3 +43,9 @@ jobs:
 #      with:
 #        name: UnitTestWithPod.framework.zip
 #        path: ./UnitTestWithPod.framework.zip
+#
+#    - name: Check OpenSSL
+#      run: openssl base64 -in ./UnitTestWithPod/UnitTestWithPod.framework.zip -out ./UnitTesetWithPod/base64.txt
+#
+#    - name: LS
+#      run: ls -la ./UnitTestWithPod
