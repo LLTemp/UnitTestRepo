@@ -14,8 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-#    - name: Test script
-#      run: ./test.sh
+    - name: Test script
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      run: ./test.sh
 
     - name: Test Execution of
       run: |
