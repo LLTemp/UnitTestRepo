@@ -14,12 +14,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Test script
-      run: ./test.sh
+#    - name: Test script
+#      run: ./test.sh
 
-#    - name: pod_install_lib
-#      run: pod install --project-directory=./UnitTestWithPod
-#
+    - name: pod_install_lib
+      run: pod install --project-directory=./UnitTestWithPod
+
 #    - name: pod_install_app
 #      run: pod install --project-directory=./UnitTestWithPodApp
 #
@@ -31,12 +31,12 @@ jobs:
 #      with:
 #        name: Coverage
 #        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
-#
-#    - name: Create framework
-#      run: xcodebuild -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
-#
-#    - name: zip_sdk
-#      run: zip -r ./UnitTestWithPod/UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
-#
-#    - name: Upload
-#      run: ./upload_framework.sh
+
+    - name: Create framework
+      run: xcodebuild -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
+
+    - name: zip_sdk
+      run: zip -r ./UnitTestWithPod/UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
+
+    - name: Upload
+      run: ./upload_framework.sh
