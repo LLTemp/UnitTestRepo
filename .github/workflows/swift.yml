@@ -14,6 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Test script
+      run: ./test.sh
+
 #    - name: pod_install_lib
 #      run: pod install --project-directory=./UnitTestWithPod
 #
@@ -33,25 +36,7 @@ jobs:
 #      run: xcodebuild -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
 #
 #    - name: zip_sdk
-#      run: zip -r UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
-
-
-    - name: Get sha1 of existing file
-      run: |
-      latestCommit=$( curl -X GET -H "Authorization: token c4ace1752e8cd4a6572002b842874f142039e9cf" "https://api.github.com/repos/LLTemp/test_sic_zip/commits?&per_page=1" | jq '.[0].sha' -r)
-      curl -X GET -H "Authorization: token c4ace1752e8cd4a6572002b842874f142039e9cf" "https://api.github.com/repos/LLTemp/test_sic_zip/git/trees/${latestCommit}" | jq '.tree[] | select(.path == "UnitTestWithPod.framework.zip") | .sha' -r
-
-
-#    - name: Prepare for uploading
-#      run: |
-#        openssl base64 -in ./UnitTestWithPod.framework.zip -out base64.txt -A
-#        base64content=$(cat base64.txt)
-#        sha1content=$(curl \
-#              -X GET \
-#              -H "Accept: application/vnd.github.v3+json" \
-#              -H "Authorization: token c4ace1752e8cd4a6572002b842874f142039e9cf" \
-#                https://api.github.com/repos/LLTemp/test_sic_zip/contents/UnitTestWithPod.framework.zip | jq .sha -r)
-#        echo "{\"message\":\"from curl\", \"content\":\"${base64content}\", \"sha\":\"${sha1content}\"}" > body.json
-
-    - name: LS
-      run: ls -la ./UnitTestWithPod
+#      run: zip -r ./UnitTestWithPod/UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
+#
+#    - name: Upload
+#      run: ./upload_framework.sh
