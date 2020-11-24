@@ -39,4 +39,4 @@ jobs:
       run: zip -r ./UnitTestWithPod/UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
 
     - name: Upload
-      run: ./upload_framework.sh
+      run: ./upload_to_github.sh
