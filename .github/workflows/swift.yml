@@ -34,20 +34,20 @@ jobs:
     - name: pod_install_app
       run: pod install --project-directory=./UnitTestWithPodApp
 
-    - name: test_sdk
-      run: xcodebuild test -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
-
-    - name: Archive test report
-      uses: actions/upload-artifact@v2
-      with:
-        name: Coverage
-        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
+#    - name: test_sdk
+#      run: xcodebuild test -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
+#
+#    - name: Archive test report
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: Coverage
+#        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
 
     - name: Create framework
       run: xcodebuild -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
 
     - name: zip_sdk
-      run: zip -r ./UnitTestWithPod/UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
+      run: zip -r ./UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
 
     - name: Upload
       env:
