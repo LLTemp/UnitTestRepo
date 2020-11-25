@@ -45,4 +45,6 @@ jobs:
       run: zip -r ./UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
 
     - name: Upload
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: ./upload_v2.sh
