@@ -14,10 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-#    - name: Test script
-#      env:
-#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-#      run: ./test.sh
+    - name: Test script
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: ./upload_v2.sh
 
 #    - name: Test Execution of
 #      run: |
@@ -26,8 +26,8 @@ jobs:
 #        --header "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
 #        --url https://api.github.com/repos/LLTemp/test_sic_zip/contents/new_one.txt
 
-    - name: pod_install_lib
-      run: pod install --project-directory=./UnitTestWithPod
+#    - name: pod_install_lib
+#      run: pod install --project-directory=./UnitTestWithPod
 
 
 
@@ -43,13 +43,13 @@ jobs:
 #        name: Coverage
 #        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
 
-    - name: Create framework
-      run: xcodebuild -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
-
-    - name: zip_sdk
-      run: zip -r ./UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
-
-    - name: Upload
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      run: ./upload_to_github.sh
+#    - name: Create framework
+#      run: xcodebuild -workspace ./UnitTestWithPod/UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
+#
+#    - name: zip_sdk
+#      run: zip -r ./UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
+#
+#    - name: Upload
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      run: ./upload_to_github.sh
