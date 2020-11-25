@@ -46,5 +46,5 @@ jobs:
 
     - name: Upload
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
       run: ./upload_v2.sh
