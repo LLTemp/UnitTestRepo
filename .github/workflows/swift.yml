@@ -49,7 +49,7 @@ jobs:
     - name: zip_sdk
       run: zip -r ./UnitTestWithPod.framework.zip ./UnitTestWithPod/UnitTestWithPod.framework
 
-#    - name: Upload
-#      env:
-#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-#      run: ./upload_to_github.sh
+    - name: Upload
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      run: ./upload_to_github.sh
