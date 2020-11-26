@@ -48,4 +48,4 @@ jobs:
       if: ${{ github.event_name == 'push' }}
       env:
         push_token: ${{ secrets.PUSH_TOKEN }}
-      run: ./upload_v2.sh
+      run: ./upload.sh
