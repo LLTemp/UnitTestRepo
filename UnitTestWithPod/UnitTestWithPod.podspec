@@ -11,7 +11,8 @@ Pod::Spec.new do |spec|
 
     spec.source       = { :http => "https://github.com/LLTemp/test_sic_zip/raw/main/UnitTestWithPod.framework.zip" }
     spec.vendored_frameworks = 'UnitTestWithPod.framework'
-    spec.header_mappings_dir = 'UnitTestWithPod.framework/Headers'
+    spec.vendored_libraries = 'UnitTestWithPod.framework/OpenSSL/lib'
+    spec.header_mappings_dir = 'UnitTestWithPod.framework/OpenSSL/include'
     
     spec.dependency 'KeychainSwift', '~> 19.0'
 end
