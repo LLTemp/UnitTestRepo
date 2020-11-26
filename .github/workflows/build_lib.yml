@@ -1,0 +1,51 @@
+name: SIC iOS SDK
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'UnitTestWithPod/**'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'UnitTestWithPod/**'
+
+defaults:
+  run:
+    working-directory: ./UnitTestWithPod
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+# Actions to compile SDK
+    - name: pod_install_lib
+      run: pod install
+
+    - name: test_sdk
+      run: xcodebuild test -workspace ./UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
+
+    - name: Archive test report
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: Coverage
+        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
+
+    - name: Create framework
+      if: ${{ github.event_name == 'push' }}
+      run: xcodebuild -workspace ./UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
+
+    - name: zip_sdk
+      if: ${{ github.event_name == 'push' }}
+      run: zip -r ./UnitTestWithPod.framework.zip ./UnitTestWithPod.framework
+
+    - name: Upload
+      if: ${{ github.event_name == 'push' }}
+      env:
+        push_token: ${{ secrets.PUSH_TOKEN }}
+      run: ./upload_v2.sh
