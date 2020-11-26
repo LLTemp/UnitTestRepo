@@ -1,9 +1,12 @@
 UnitTestWithPod/Pods/
 UnitTestWithPod/build/
 UnitTestWithPod/.idea/
+UnitTestWithPod/UnitTestWithPod.framework/
+UnitTestWithPod/UnitTestWithPod.xcworkspace/xcuserdata/
 
 UnitTestWithPodApp/.idea/
 UnitTestWithPodApp/Pods/
+UnitTestWithPodApp/UnitTestWithPodAPP.xcworkspace/xcuserdata/
 
 
 *.DS_Store
