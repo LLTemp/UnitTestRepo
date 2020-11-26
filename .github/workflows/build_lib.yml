@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-# Actions to compile SDK
+    # TODO Cache dependencies
     - name: pod_install_lib
       run: pod install
 
