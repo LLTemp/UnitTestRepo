@@ -5,10 +5,12 @@ on:
     branches: [ master ]
     paths:
       - 'UnitTestWithPod/**'
+      - '.github/workflow/build_lib.yml'
   pull_request:
     branches: [ master ]
     paths:
       - 'UnitTestWithPod/**'
+      - '.github/workflow/build_lib.yml'
 
 defaults:
   run:
@@ -45,11 +47,11 @@ jobs:
       run: zip -r ./UnitTestWithPod.framework.zip ./UnitTestWithPod.framework
 
     - name: Save framework
-        if: ${{ always() }}
-        uses: actions/upload-artifact@v2
-        with:
-          name: Coverage
-          path: ./UnitTestWithPod.framework.zip
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: Coverage
+        path: ./UnitTestWithPod.framework.zip
 
     - name: Upload
       if: ${{ github.event_name == 'push' }}
