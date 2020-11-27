@@ -55,7 +55,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: UnitTestWithPod.framework.zip
-        path: /UnitTestWithPod/UnitTestWithPod.framework.zip
+        path: UnitTestWithPod/UnitTestWithPod.framework.zip
 
     - name: Save framework
       if: ${{ always() }}
