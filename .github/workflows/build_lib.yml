@@ -52,16 +52,16 @@ jobs:
 
     - name: Save framework ZIP
       if: ${{ always() }}
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2-preview
       with:
-        name: Coverage
+        name: UnitTestWithPod.framework.zip
         path: UnitTestWithPod.framework.zip
 
     - name: Save framework
       if: ${{ always() }}
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2-preview
       with:
-        name: Coverage
+        name: UnitTestWithPod.framework
         path: UnitTestWithPod.framework
 
     - name: LS
