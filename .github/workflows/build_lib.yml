@@ -64,11 +64,11 @@ jobs:
         name: UnitTestWithPod.framework
         path: UnitTestWithPod/UnitTestWithPod.framework/*
 
-    - name: Save framework
+    - name: Save builddir
       if: ${{ always() }}
       uses: actions/upload-artifact@v2
       with:
-        name: UnitTestWithPod.framework
+        name: build
         path: UnitTestWithPod/build/*
 
     - name: LS
