@@ -19,7 +19,7 @@ defaults:
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: macos-10.15
 
     steps:
     - uses: actions/checkout@v2
@@ -55,14 +55,14 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: UnitTestWithPod.framework.zip
-        path: UnitTestWithPod.framework.zip
+        path: /UnitTestWithPod/UnitTestWithPod.framework.zip
 
     - name: Save framework
       if: ${{ always() }}
       uses: actions/upload-artifact@v2
       with:
         name: UnitTestWithPod.framework
-        path: UnitTestWithPod.framework/*
+        path: UnitTestWithPod/UnitTestWithPod.framework/*
 
     - name: LS
       if: ${{ always() }}
