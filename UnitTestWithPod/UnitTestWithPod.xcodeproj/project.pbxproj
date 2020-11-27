@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		81C038030DEC337ED7BD54B8 /* Pods_UnitTestWithPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B62F699BFC992B3112817B /* Pods_UnitTestWithPod.framework */; };
+		0736678CE8C27337E4416F46 /* Pods_UnitTestWithPod_UnitTestWithPodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D30506AB8315DA5A6FC3CF4 /* Pods_UnitTestWithPod_UnitTestWithPodTests.framework */; };
 		A546598325657F96003FA51D /* UnitTestWithPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A546597925657F96003FA51D /* UnitTestWithPod.framework */; };
 		A546598825657F96003FA51D /* UnitTestWithPodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A546598725657F96003FA51D /* UnitTestWithPodTests.swift */; };
 		A546598A25657F96003FA51D /* UnitTestWithPod.h in Headers */ = {isa = PBXBuildFile; fileRef = A546597C25657F96003FA51D /* UnitTestWithPod.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,7 +35,7 @@
 		A54659C32566592C003FA51D /* OpenSSL in Resources */ = {isa = PBXBuildFile; fileRef = A54659C22566592C003FA51D /* OpenSSL */; };
 		A5F37E302566AD1C00C570B1 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F37E2F2566AD0A00C570B1 /* libcrypto.a */; };
 		A5F37E352566AD2400C570B1 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F37E342566AD2400C570B1 /* libssl.a */; };
-		B691C75CCD70CAFB131ECE14 /* Pods_UnitTestWithPod_UnitTestWithPodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8B5818A693A493F0ABEB0B /* Pods_UnitTestWithPod_UnitTestWithPodTests.framework */; };
+		FFDED8F4DA6AB2DA8E07E919 /* Pods_UnitTestWithPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017D6B7B607239E993EF6628 /* Pods_UnitTestWithPod.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,12 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		123C5957185176ACF99DAD43 /* Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod-UnitTestWithPodTests/Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig"; sourceTree = "<group>"; };
-		1261D7E69A4627718C5759D1 /* Pods-UnitTestWithPod-UnitTestWithPodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod-UnitTestWithPodTests.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod-UnitTestWithPodTests/Pods-UnitTestWithPod-UnitTestWithPodTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1F7DF689F3F854B1713084EB /* Pods-UnitTestWithPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod.release.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod/Pods-UnitTestWithPod.release.xcconfig"; sourceTree = "<group>"; };
-		28B62F699BFC992B3112817B /* Pods_UnitTestWithPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestWithPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CC6C8248B17EE9899613DF8 /* Pods-UnitTestWithPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod/Pods-UnitTestWithPod.debug.xcconfig"; sourceTree = "<group>"; };
-		3F8B5818A693A493F0ABEB0B /* Pods_UnitTestWithPod_UnitTestWithPodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestWithPod_UnitTestWithPodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		017D6B7B607239E993EF6628 /* Pods_UnitTestWithPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestWithPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F2E10594A95CDE7756C3591 /* Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod-UnitTestWithPodTests/Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D30506AB8315DA5A6FC3CF4 /* Pods_UnitTestWithPod_UnitTestWithPodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestWithPod_UnitTestWithPodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6366D5D4292CA5D714EC92CC /* Pods-UnitTestWithPod-UnitTestWithPodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod-UnitTestWithPodTests.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod-UnitTestWithPodTests/Pods-UnitTestWithPod-UnitTestWithPodTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A2716BEA1AA211491C815AB /* Pods-UnitTestWithPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod.release.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod/Pods-UnitTestWithPod.release.xcconfig"; sourceTree = "<group>"; };
 		A546597925657F96003FA51D /* UnitTestWithPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnitTestWithPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A546597C25657F96003FA51D /* UnitTestWithPod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitTestWithPod.h; sourceTree = "<group>"; };
 		A546597D25657F96003FA51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		A54659C22566592C003FA51D /* OpenSSL */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OpenSSL; sourceTree = "<group>"; };
 		A5F37E2F2566AD0A00C570B1 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = OpenSSL/lib/libcrypto.a; sourceTree = "<group>"; };
 		A5F37E342566AD2400C570B1 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = OpenSSL/lib/libssl.a; sourceTree = "<group>"; };
+		C77F8E62F73A2D553E42A981 /* Pods-UnitTestWithPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod/Pods-UnitTestWithPod.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,7 @@
 			files = (
 				A5F37E352566AD2400C570B1 /* libssl.a in Frameworks */,
 				A5F37E302566AD1C00C570B1 /* libcrypto.a in Frameworks */,
-				81C038030DEC337ED7BD54B8 /* Pods_UnitTestWithPod.framework in Frameworks */,
+				FFDED8F4DA6AB2DA8E07E919 /* Pods_UnitTestWithPod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A546598325657F96003FA51D /* UnitTestWithPod.framework in Frameworks */,
-				B691C75CCD70CAFB131ECE14 /* Pods_UnitTestWithPod_UnitTestWithPodTests.framework in Frameworks */,
+				0736678CE8C27337E4416F46 /* Pods_UnitTestWithPod_UnitTestWithPodTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,8 +173,8 @@
 			children = (
 				A5F37E342566AD2400C570B1 /* libssl.a */,
 				A5F37E2F2566AD0A00C570B1 /* libcrypto.a */,
-				28B62F699BFC992B3112817B /* Pods_UnitTestWithPod.framework */,
-				3F8B5818A693A493F0ABEB0B /* Pods_UnitTestWithPod_UnitTestWithPodTests.framework */,
+				017D6B7B607239E993EF6628 /* Pods_UnitTestWithPod.framework */,
+				3D30506AB8315DA5A6FC3CF4 /* Pods_UnitTestWithPod_UnitTestWithPodTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,10 +182,10 @@
 		AEEA1F789DAAE7269CF380CE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2CC6C8248B17EE9899613DF8 /* Pods-UnitTestWithPod.debug.xcconfig */,
-				1F7DF689F3F854B1713084EB /* Pods-UnitTestWithPod.release.xcconfig */,
-				1261D7E69A4627718C5759D1 /* Pods-UnitTestWithPod-UnitTestWithPodTests.debug.xcconfig */,
-				123C5957185176ACF99DAD43 /* Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig */,
+				C77F8E62F73A2D553E42A981 /* Pods-UnitTestWithPod.debug.xcconfig */,
+				8A2716BEA1AA211491C815AB /* Pods-UnitTestWithPod.release.xcconfig */,
+				6366D5D4292CA5D714EC92CC /* Pods-UnitTestWithPod-UnitTestWithPodTests.debug.xcconfig */,
+				2F2E10594A95CDE7756C3591 /* Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A546598D25657F96003FA51D /* Build configuration list for PBXNativeTarget "UnitTestWithPod" */;
 			buildPhases = (
-				A22D51A24872743250ADF7EC /* [CP] Check Pods Manifest.lock */,
+				B2C2AD555547E6F4489EF5BD /* [CP] Check Pods Manifest.lock */,
 				A546597425657F96003FA51D /* Headers */,
 				A546597525657F96003FA51D /* Sources */,
 				A546597625657F96003FA51D /* Frameworks */,
@@ -227,11 +227,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A546599025657F96003FA51D /* Build configuration list for PBXNativeTarget "UnitTestWithPodTests" */;
 			buildPhases = (
-				3830A64037622D15BEB1005D /* [CP] Check Pods Manifest.lock */,
+				7FC4FF5266EC2C9A8763CE0D /* [CP] Check Pods Manifest.lock */,
 				A546597E25657F96003FA51D /* Sources */,
 				A546597F25657F96003FA51D /* Frameworks */,
 				A546598025657F96003FA51D /* Resources */,
-				E931A014EE49634EAC7B4E9A /* [CP] Embed Pods Frameworks */,
+				18AC45306F14686443E5C94D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -336,7 +336,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3830A64037622D15BEB1005D /* [CP] Check Pods Manifest.lock */ = {
+		18AC45306F14686443E5C94D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnitTestWithPod-UnitTestWithPodTests/Pods-UnitTestWithPod-UnitTestWithPodTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnitTestWithPod-UnitTestWithPodTests/Pods-UnitTestWithPod-UnitTestWithPodTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnitTestWithPod-UnitTestWithPodTests/Pods-UnitTestWithPod-UnitTestWithPodTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FC4FF5266EC2C9A8763CE0D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -358,7 +375,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A22D51A24872743250ADF7EC /* [CP] Check Pods Manifest.lock */ = {
+		A5F37EAF2566BF7600C570B1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Set bash script to exit immediately if any commands fail.\nset -e\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"UnitTestWithPod\"\nOUTPUT_DIR=\"${SRCROOT}/build\"\n\necho ${OUTPUT_DIR}\n\n# If remains from a previous build exist,delete them.\nif [ -d \"${OUTPUT_DIR}\" ]; then\nrm -rf \"${OUTPUT_DIR}\"\nfi\n\n# Build the framework for device and for simulator.\necho \"Building for device\"\nxcodebuild -workspace ./${FRAMEWORK_NAME}.xcworkspace -scheme ${FRAMEWORK_NAME} -configuration Release -arch arm64 defines_module=yes -sdk \"iphoneos\" -derivedDataPath \"${OUTPUT_DIR}\" CODE_SIGN_IDENTITY=\"\"\n\necho \"Building for Simulator\"\nxcodebuild -workspace ./${FRAMEWORK_NAME}.xcworkspace -scheme ${FRAMEWORK_NAME} -configuration Release -arch x86_64 defines_module=yes -sdk \"iphonesimulator\" -derivedDataPath \"${OUTPUT_DIR}\" CODE_SIGN_IDENTITY=\"\"\n\n# Remove .framework file if exists from previous run.\nif [ -d \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\nfi\n# Copy the device version of framework.\ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\n# Merging the device and simulator frameworks' executables with \n# lipo.\nlipo -create -output \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n# Copy Swift module mappings for simulator into the framework. \ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# Create new combined simulator and device swift header file.\nCOMBINED_PATH=\"${BUILD_DIR}/iOS + iOS Simulator/${PROJECT_NAME}-Swift.h\"\nmkdir -p \"${BUILD_DIR}/iOS + iOS Simulator/\"\ntouch \"${COMBINED_PATH}\"\necho \"#ifndef TARGET_OS_SIMULATOR\\n#include <TargetConditionals.h>\\n#endif\\n#if TARGET_OS_SIMULATOR\" >> \"${COMBINED_PATH}\"\ncat \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}-Swift.h\" >> \"${COMBINED_PATH}\"\necho \"#else\" >> \"${COMBINED_PATH}\"\necho \"//Start of iphoneos\" >> \"${COMBINED_PATH}\"\ncat \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}-Swift.h\" >> \"${COMBINED_PATH}\"\necho \"#endif\" >> \"${COMBINED_PATH}\"\n# Overwrite generated -Swift.h file with combined -Swift.h file \ncat \"$COMBINED_PATH\" > \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}-Swift.h\"\n#Optional Step to copy the framework to root folder\ncp -r \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\" \"${SRCROOT}\"\n\n#Podspec version\necho \"Path = ${PROJECT_DIR}/UnitTestWithPod/Info.plist\"\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/UnitTestWithPod/Info.plist\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $buildNumber\" \"${PROJECT_DIR}/UnitTestWithPod/Info.plist\"\n\nversion=\"$CURRENT_PROJECT_VERSION.$buildNumber\"\necho $version\nsed -E -i '' -e \"s/[0-9]{1,}.[0-9]{1,}.[0-9]{1,}/${version}/\" UnitTestWithPod.podspec\n";
+		};
+		B2C2AD555547E6F4489EF5BD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,40 +412,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5F37EAF2566BF7600C570B1 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Set bash script to exit immediately if any commands fail.\nset -e\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"UnitTestWithPod\"\nOUTPUT_DIR=\"${SRCROOT}/build\"\n\necho ${OUTPUT_DIR}\n\n# If remains from a previous build exist,delete them.\nif [ -d \"${OUTPUT_DIR}\" ]; then\nrm -rf \"${OUTPUT_DIR}\"\nfi\n\n# Build the framework for device and for simulator.\necho \"Building for device\"\nxcodebuild -workspace ./${FRAMEWORK_NAME}.xcworkspace -scheme ${FRAMEWORK_NAME} -configuration Release -arch arm64 defines_module=yes -sdk \"iphoneos\" -derivedDataPath \"${OUTPUT_DIR}\" CODE_SIGN_IDENTITY=\"\"\n\necho \"Building for Simulator\"\nxcodebuild -workspace ./${FRAMEWORK_NAME}.xcworkspace -scheme ${FRAMEWORK_NAME} -configuration Release -arch x86_64 defines_module=yes -sdk \"iphonesimulator\" -derivedDataPath \"${OUTPUT_DIR}\" CODE_SIGN_IDENTITY=\"\"\n\n# Remove .framework file if exists from previous run.\nif [ -d \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\nfi\n# Copy the device version of framework.\ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\n# Merging the device and simulator frameworks' executables with \n# lipo.\nlipo -create -output \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n# Copy Swift module mappings for simulator into the framework. \ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# Create new combined simulator and device swift header file.\nCOMBINED_PATH=\"${BUILD_DIR}/iOS + iOS Simulator/${PROJECT_NAME}-Swift.h\"\nmkdir -p \"${BUILD_DIR}/iOS + iOS Simulator/\"\ntouch \"${COMBINED_PATH}\"\necho \"#ifndef TARGET_OS_SIMULATOR\\n#include <TargetConditionals.h>\\n#endif\\n#if TARGET_OS_SIMULATOR\" >> \"${COMBINED_PATH}\"\ncat \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}-Swift.h\" >> \"${COMBINED_PATH}\"\necho \"#else\" >> \"${COMBINED_PATH}\"\necho \"//Start of iphoneos\" >> \"${COMBINED_PATH}\"\ncat \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}-Swift.h\" >> \"${COMBINED_PATH}\"\necho \"#endif\" >> \"${COMBINED_PATH}\"\n# Overwrite generated -Swift.h file with combined -Swift.h file \ncat \"$COMBINED_PATH\" > \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}-Swift.h\"\n#Optional Step to copy the framework to root folder\ncp -r \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\" \"${SRCROOT}\"\n\n#Podspec version\necho \"Path = ${PROJECT_DIR}/UnitTestWithPod/Info.plist\"\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/UnitTestWithPod/Info.plist\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString $buildNumber\" \"${PROJECT_DIR}/UnitTestWithPod/Info.plist\"\n\nversion=\"$CURRENT_PROJECT_VERSION.$buildNumber\"\necho $version\nsed -E -i '' -e \"s/[0-9]{1,}.[0-9]{1,}.[0-9]{1,}/${version}/\" SDK.podspec\n";
-		};
-		E931A014EE49634EAC7B4E9A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnitTestWithPod-UnitTestWithPodTests/Pods-UnitTestWithPod-UnitTestWithPodTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UnitTestWithPod-UnitTestWithPodTests/Pods-UnitTestWithPod-UnitTestWithPodTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnitTestWithPod-UnitTestWithPodTests/Pods-UnitTestWithPod-UnitTestWithPodTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -602,7 +602,7 @@
 		};
 		A546598E25657F96003FA51D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CC6C8248B17EE9899613DF8 /* Pods-UnitTestWithPod.debug.xcconfig */;
+			baseConfigurationReference = C77F8E62F73A2D553E42A981 /* Pods-UnitTestWithPod.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
@@ -643,7 +643,7 @@
 		};
 		A546598F25657F96003FA51D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F7DF689F3F854B1713084EB /* Pods-UnitTestWithPod.release.xcconfig */;
+			baseConfigurationReference = 8A2716BEA1AA211491C815AB /* Pods-UnitTestWithPod.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
@@ -683,7 +683,7 @@
 		};
 		A546599125657F96003FA51D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1261D7E69A4627718C5759D1 /* Pods-UnitTestWithPod-UnitTestWithPodTests.debug.xcconfig */;
+			baseConfigurationReference = 6366D5D4292CA5D714EC92CC /* Pods-UnitTestWithPod-UnitTestWithPodTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -710,7 +710,7 @@
 		};
 		A546599225657F96003FA51D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 123C5957185176ACF99DAD43 /* Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig */;
+			baseConfigurationReference = 2F2E10594A95CDE7756C3591 /* Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
