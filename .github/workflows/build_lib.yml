@@ -46,12 +46,20 @@ jobs:
       if: ${{ github.event_name == 'push' }}
       run: zip -r ./UnitTestWithPod.framework.zip ./UnitTestWithPod.framework
 
+    - name: LS1
+      if: ${{ always() }}
+      run: ls -la
+
     - name: Save framework
       if: ${{ always() }}
       uses: actions/upload-artifact@v2
       with:
         name: Coverage
         path: ./UnitTestWithPod.framework.zip
+
+    - name: LS
+      if: ${{ always() }}
+      run: ls -la
 
     - name: Upload
       if: ${{ github.event_name == 'push' }}
