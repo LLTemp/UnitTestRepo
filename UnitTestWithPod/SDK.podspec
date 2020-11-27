@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
-    spec.name         = "UnitTestWithPod"
-    spec.version      = "1.0.56"
+    spec.name         = "SDK"
+    spec.version      = "1.0.57"
     spec.summary      = "A really short description of test_sic. Included some specific points"
     spec.description  = "Signer’s Interaction Component. Part of the eID App which is responsible for managing keys, interractins with SSA"
     spec.homepage     = "https://github.com/LLTemp/test_sic_zip"
