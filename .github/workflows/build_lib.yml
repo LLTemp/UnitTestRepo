@@ -50,12 +50,19 @@ jobs:
       if: ${{ always() }}
       run: ls -la
 
+    - name: Save framework ZIP
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: Coverage
+        path: UnitTestWithPod.framework.zip
+
     - name: Save framework
       if: ${{ always() }}
       uses: actions/upload-artifact@v2
       with:
         name: Coverage
-        path: ./UnitTestWithPod.framework.zip
+        path: UnitTestWithPod.framework
 
     - name: LS
       if: ${{ always() }}
