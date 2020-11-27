@@ -64,6 +64,13 @@ jobs:
         name: UnitTestWithPod.framework
         path: UnitTestWithPod/UnitTestWithPod.framework/*
 
+    - name: Save framework
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: UnitTestWithPod.framework
+        path: UnitTestWithPod/build/*
+
     - name: LS
       if: ${{ always() }}
       run: ls -la
