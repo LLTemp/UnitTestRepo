@@ -5,12 +5,12 @@ on:
     branches: [ master ]
     paths:
       - 'UnitTestWithPod/**'
-      - '.github/workflow/**'
+      - '.github/**'
   pull_request:
     branches: [ master ]
     paths:
       - 'UnitTestWithPod/**'
-      - '.github/workflow/**'
+      - '.github/**'
 
 defaults:
   run:
