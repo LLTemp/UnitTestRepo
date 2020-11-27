@@ -5,7 +5,7 @@ on:
     branches: [ master ]
     paths:
       - 'UnitTestWithPod/**'
-      - '.github/workflow**'
+      - '.github/workflow/**'
   pull_request:
     branches: [ master ]
     paths:
