@@ -22,17 +22,14 @@ jobs:
     runs-on: macos-10.15
 
     steps:
-    #- uses: actions/checkout@v2
-    - uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: '12.0'
-
     - uses: actions/checkout@v2
-
 
     # TODO Cache dependencies
     - name: pod_install_lib
       run: pod install --clean-install
+
+    - name: xcodebuild version
+      run: /usr/bin/xcodebuild -version
 
 #    - name: test_sdk
 #      run: xcodebuild test -workspace ./UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
@@ -63,12 +60,12 @@ jobs:
         name: UnitTestWithPod.framework.zip
         path: UnitTestWithPod/UnitTestWithPod.framework.zip
 
-    - name: Save framework
-      if: ${{ always() }}
-      uses: actions/upload-artifact@v2
-      with:
-        name: UnitTestWithPod.framework
-        path: UnitTestWithPod/UnitTestWithPod.framework/*
+#    - name: Save framework
+#      if: ${{ always() }}
+#      uses: actions/upload-artifact@v2
+#      with:
+#        name: UnitTestWithPod.framework
+#        path: UnitTestWithPod/UnitTestWithPod.framework/*
 
 #    - name: Save builddir
 #      if: ${{ always() }}
