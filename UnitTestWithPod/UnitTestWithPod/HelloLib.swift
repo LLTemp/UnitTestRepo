@@ -7,7 +7,7 @@
 
 import Foundation
 import KeychainSwift
-import OpenSSL
+import UnitTestWithPod.OpenSSL
 
 public class HelloLib {
     
@@ -16,8 +16,6 @@ public class HelloLib {
     public class func helloWorld(){
         print("hello world")
     }
-
-
 
     public class func returnZero() -> Int{
         0
@@ -35,7 +33,7 @@ public class HelloLib {
         var result = [UInt8](repeating: 0, count: Int(MD5_DIGEST_LENGTH))
         let source = Array("hello".utf8)
         MD5(source, source.count, &result)
-        
+
         let resData = Data(result)
         return resData.hex
     }
