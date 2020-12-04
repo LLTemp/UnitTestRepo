@@ -33,9 +33,9 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Coverage
-        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
+        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPodAPP-aixaeyjiavyyshfgxjwdsrcmncun/Logs/Test/*.xcresult
 
-    - name: Kreate keychain
+    - name: Create keychain
       if: ${{ github.event_name == 'push' }}
       run: ./scripts/add-key.sh
 
