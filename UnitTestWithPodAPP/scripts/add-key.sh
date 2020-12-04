@@ -22,4 +22,4 @@ security set-key-partition-list -S apple-tool:,apple: -s -k ci ios-build.keychai
 
 # Put the provisioning profile in place
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-cp "./profile/UnitTestRepoAppAdHocCI.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
+cp "./scripts/profile/UnitTestRepoAppAdHocCI.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
