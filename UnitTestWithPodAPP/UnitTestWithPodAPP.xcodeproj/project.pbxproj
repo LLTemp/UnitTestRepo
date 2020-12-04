@@ -16,8 +16,7 @@
 		A5465A072566674A003FA51D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5465A052566674A003FA51D /* LaunchScreen.storyboard */; };
 		A555D9382578D6170019E1AE /* UnitTestWithPodAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555D9372578D6170019E1AE /* UnitTestWithPodAPPTests.swift */; };
 		A555D9552578F1080019E1AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A555D9542578F1080019E1AE /* GoogleService-Info.plist */; };
-		A555DAA3257A62820019E1AE /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = A555DAA2257A62820019E1AE /* exportOptions.plist */; };
-		A555DAAB257A78D30019E1AE /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = A555DAAA257A78D20019E1AE /* scripts */; };
+		CA01F1E651549F56519988C5 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA01FEB79D6BC49F8CB2A1EF /* exportOptions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +44,7 @@
 		A555D9372578D6170019E1AE /* UnitTestWithPodAPPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestWithPodAPPTests.swift; sourceTree = "<group>"; };
 		A555D9392578D6170019E1AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A555D9542578F1080019E1AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A555DAA2257A62820019E1AE /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
-		A555DAAA257A78D20019E1AE /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = scripts; sourceTree = "<group>"; };
+		CA01FEB79D6BC49F8CB2A1EF /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = exportOptions.plist; path = UnitTestWithPodAPP/exportOptions.plist; sourceTree = "<group>"; };
 		CC36ADF15FA4A1CA28C7DA02 /* Pods-UnitTestWithPodAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPodAPP.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPodAPP/Pods-UnitTestWithPodAPP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				27434074168F5FFD69A0CDDF /* Pods_UnitTestWithPodAPP.framework */,
+				CA01FEB79D6BC49F8CB2A1EF /* exportOptions.plist */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,7 +79,6 @@
 		A54659EE25666749003FA51D = {
 			isa = PBXGroup;
 			children = (
-				A555DAAA257A78D20019E1AE /* scripts */,
 				A54659F925666749003FA51D /* UnitTestWithPodAPP */,
 				A555D9362578D6170019E1AE /* UnitTestWithPodAPPTests */,
 				A54659F825666749003FA51D /* Products */,
@@ -101,7 +99,6 @@
 		A54659F925666749003FA51D /* UnitTestWithPodAPP */ = {
 			isa = PBXGroup;
 			children = (
-				A555DAA2257A62820019E1AE /* exportOptions.plist */,
 				A555D9542578F1080019E1AE /* GoogleService-Info.plist */,
 				A54659FA25666749003FA51D /* AppDelegate.swift */,
 				A54659FC25666749003FA51D /* SceneDelegate.swift */,
@@ -216,10 +213,9 @@
 			files = (
 				A5465A072566674A003FA51D /* LaunchScreen.storyboard in Resources */,
 				A555D9552578F1080019E1AE /* GoogleService-Info.plist in Resources */,
-				A555DAA3257A62820019E1AE /* exportOptions.plist in Resources */,
-				A555DAAB257A78D30019E1AE /* scripts in Resources */,
 				A5465A042566674A003FA51D /* Assets.xcassets in Resources */,
 				A5465A0225666749003FA51D /* Main.storyboard in Resources */,
+				CA01F1E651549F56519988C5 /* exportOptions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
