@@ -37,6 +37,8 @@ jobs:
 
     - name: Create keychain
       if: ${{ github.event_name == 'push' }}
+      env:
+        P12_SECRET: ${{ secrets.P12_SECRET }}
       run: ./scripts/add-key.sh
 
 #    - name: Install firebase tools
