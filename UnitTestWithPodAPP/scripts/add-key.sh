@@ -14,9 +14,9 @@ security unlock-keychain -p ci ios-build.keychain
 security set-keychain-settings -t 3600 -l ~/Library/Keychains/ios-build.keychain
 
 # Add certificates to keychain and allow codesign to access them
-security import ./certs/apple.cer -k ~/Library/Keychains/ios-build.keychain -A /usr/bin/codesign
-security import ./certs/dist.cer -k ~/Library/Keychains/ios-build.keychain -A /usr/bin/codesign
-security import ./certs/dist.p12 -k ~/Library/Keychains/ios-build.keychain -P $P12_SECRET -A /usr/bin/codesign
+security import ./scripts/certs/apple.cer -k ~/Library/Keychains/ios-build.keychain -A /usr/bin/codesign
+security import ./scripts/certs/dist.cer -k ~/Library/Keychains/ios-build.keychain -A /usr/bin/codesign
+security import ./scripts/certs/dist.p12 -k ~/Library/Keychains/ios-build.keychain -P $P12_SECRET -A /usr/bin/codesign
 # Some MAGIC (TODO INVESTIGATE) which helps to NOT hangs the codesign
 security set-key-partition-list -S apple-tool:,apple: -s -k ci ios-build.keychain
 
