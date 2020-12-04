@@ -4,11 +4,21 @@ source 'https://cdn.cocoapods.org/'
 target 'UnitTestWithPodAPP' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for UnitTestWithPodAPP
-  #pod 'UnitTestWithPod', :podspec => 'https://raw.githubusercontent.com/LLTemp/test_sic_zip/main/UnitTestWithPod.podspec'
-  #pod 'UnitTestWithPod', :podspec => '../UnitTestWithPod/UnitTestWithPod.podspec'
-  pod 'UnitTestWithPod', :path => '../UnitTestWithPod'
-
+  pod 'UnitTestWithPod', :podspec => 'https://raw.githubusercontent.com/LLTemp/test_sic_zip/main/UnitTestWithPod.podspec'
+  
+  # add pods for desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
+  #pod 'Firebase/AppDistribution'
 
 end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+    end
+  end
+end
+

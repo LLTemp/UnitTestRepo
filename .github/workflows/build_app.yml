@@ -16,11 +16,35 @@ defaults:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-10.15
 
     steps:
     - uses: actions/checkout@v2
 
 # Actions to run example application
-    - name: pod_install_lib
+    - name: Pod install
       run: pod install
+
+    - name: Run unit tests
+      run: xcodebuild test -workspace ./UnitTestWithPodApp.xcworkspace -scheme UnitTestWithPodAPPTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
+
+    - name: Archive test report
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: Coverage
+        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
+
+    - name: Kreate keychain
+      if: ${{ github.event_name == 'push' }}
+      run: ./scripts/add-key.sh
+
+#    - name: Install firebase tools
+#      if: ${{ github.event_name == 'push' }}
+#      run: npm install -g firebase-tools
+#
+#    - name: Build archive
+#      run: |
+#        xcodebuild -workspace ./UnitTestWithPodApp.xcworkspace -scheme Cleverbase -sdk iphoneos -configuration Release archive -archivePath ./build/Cleverbase.xcarchive
+#        xcodebuild -exportArchive -archivePath ./build/Cleverbase.xcarchive -exportOptionsPlist ./scripts/exportOptions.plist -exportPath ./build
+

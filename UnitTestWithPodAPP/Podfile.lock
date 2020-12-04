@@ -1,10 +1,10 @@
 PODS:
   - KeychainSwift (19.0.0)
-  - UnitTestWithPod (1.0.52):
+  - UnitTestWithPod (1.0.81):
     - KeychainSwift (~> 19.0)
 
 DEPENDENCIES:
-  - UnitTestWithPod (from `../UnitTestWithPod`)
+  - UnitTestWithPod (from `https://raw.githubusercontent.com/LLTemp/test_sic_zip/main/UnitTestWithPod.podspec`)
 
 SPEC REPOS:
   trunk:
@@ -12,12 +12,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   UnitTestWithPod:
-    :path: "../UnitTestWithPod"
+    :podspec: https://raw.githubusercontent.com/LLTemp/test_sic_zip/main/UnitTestWithPod.podspec
 
 SPEC CHECKSUMS:
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
-  UnitTestWithPod: cbd1b0128fef869ecb3ca48f2021c9aecba6acb9
+  UnitTestWithPod: e5c5d1f6215d1ce01abd45de3c0b2f663d373908
 
-PODFILE CHECKSUM: 58c1a261695c9fc2b2e514671def35cdcb0bf68f
+PODFILE CHECKSUM: 504dd8d9881b46f7e8796c69075b6b1435c24b90
 
 COCOAPODS: 1.10.0

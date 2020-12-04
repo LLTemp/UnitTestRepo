@@ -18,31 +18,24 @@ defaults:
 
 jobs:
   build:
-
     runs-on: macos-10.15
 
     steps:
-    - uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: '12.0'
     - uses: actions/checkout@v2
 
     # TODO Cache dependencies
-    - name: pod_install_lib
-      run: pod install --clean-install
+    - name: Pod install
+      run: pod install
 
-    - name: xcodebuild version
-      run: /usr/bin/xcodebuild -version
+    - name: Run unit tests
+      run: xcodebuild test -workspace ./UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
 
-#    - name: test_sdk
-#      run: xcodebuild test -workspace ./UnitTestWithPod.xcworkspace -scheme UnitTestWithPodTests ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO -destination "platform=iOS Simulator,OS=14.0,name=iPhone 8"
-#
-#    - name: Archive test report
-#      if: ${{ always() }}
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: Coverage
-#        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
+    - name: Archive test report
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: Coverage
+        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPod-fznsrnskqxpbyodcpeiavrncgppz/Logs/Test/*.xcresult
 
     - name: Create framework
       if: ${{ github.event_name == 'push' }}
@@ -52,34 +45,13 @@ jobs:
       if: ${{ github.event_name == 'push' }}
       run: zip -r ./UnitTestWithPod.framework.zip ./UnitTestWithPod.framework
 
-    - name: LS1
-      if: ${{ always() }}
-      run: ls -la
-
-    - name: Save framework ZIP
-      if: ${{ always() }}
-      uses: actions/upload-artifact@v2
-      with:
-        name: UnitTestWithPod.framework.zip
-        path: UnitTestWithPod/UnitTestWithPod.framework.zip
-
-#    - name: Save framework
+#####   DO not remove. For test purposes #####
+#    - name: Save framework ZIP
 #      if: ${{ always() }}
 #      uses: actions/upload-artifact@v2
 #      with:
-#        name: UnitTestWithPod.framework
-#        path: UnitTestWithPod/UnitTestWithPod.framework/*
-
-#    - name: Save builddir
-#      if: ${{ always() }}
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: build
-#        path: UnitTestWithPod/build/*
-
-    - name: LS
-      if: ${{ always() }}
-      run: ls -la
+#        name: UnitTestWithPod.framework.zip
+#        path: UnitTestWithPod/UnitTestWithPod.framework.zip
 
     - name: Upload
       if: ${{ github.event_name == 'push' }}

@@ -13,11 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        HelloLib.helloWorld()
-        
-        
+        let res = HelloLib.md5()
+        print("res = \(res)")
     }
-
-
 }
 

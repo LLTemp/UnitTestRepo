@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>signingCertificate</key>
+	<string>Apple Distribution: cleverbase bv (45PDR3G882)</string>
+	<key>compileBitcode</key>
+	<false/>
+	<key>teamID</key>
+	<string>RD94NG5452</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+	<key>method</key>
+	<string>ad-hoc</string>
+	<key>provisioningProfiles</key>
+	<dict>
+		<key>com.ledgerleopard.UnitTestWithPodAPP</key>
+		<string>UnitTestRepoAppAdHocCI</string>
+	</dict>
+</dict>
+</plist>
