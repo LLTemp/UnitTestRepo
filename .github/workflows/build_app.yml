@@ -35,23 +35,23 @@ jobs:
 #        name: Coverage
 #        path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPodAPP-aixaeyjiavyyshfgxjwdsrcmncun/Logs/Test/*.xcresult
 #
-#    - name: Create keychain
-#      if: ${{ github.event_name == 'push' }}
-#      env:
-#        P12_SECRET: ${{ secrets.P12_SECRET }}
-#      run: ./scripts/add-key.sh
-#
-#    - name: Build archive
-#      run: |
-#        xcodebuild -workspace ./UnitTestWithPodAPP.xcworkspace -scheme UnitTestWithPodAPP -sdk iphoneos -configuration Release archive -archivePath ./build/UnitTestWithPodAPP.xcarchive
-#        xcodebuild -exportArchive -archivePath ./build/UnitTestWithPodAPP.xcarchive -exportOptionsPlist ./scripts/exportOptions.plist -exportPath ./build
-#
-#    - name: Archive Archive
-#      if: ${{ always() }}
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: UnitTestWithPodAPP.xcarchive
-#        path: UnitTestWithPodAPP/build/UnitTestWithPodAPP.xcarchive
+    - name: Create keychain
+      if: ${{ github.event_name == 'push' }}
+      env:
+        P12_SECRET: ${{ secrets.P12_SECRET }}
+      run: ./scripts/add-key.sh
+
+    - name: Build archive
+      run: |
+        xcodebuild -workspace ./UnitTestWithPodAPP.xcworkspace -scheme UnitTestWithPodAPP -sdk iphoneos -configuration Release archive -archivePath ./build/UnitTestWithPodAPP.xcarchive
+        xcodebuild -exportArchive -archivePath ./build/UnitTestWithPodAPP.xcarchive -exportOptionsPlist ./scripts/exportOptions.plist -exportPath ./build
+
+    - name: Archive Archive
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: UnitTestWithPodAPP.xcarchive
+        path: UnitTestWithPodAPP/build/UnitTestWithPodAPP.xcarchive
 
     - name: Install firebase tools
       if: ${{ github.event_name == 'push' }}
