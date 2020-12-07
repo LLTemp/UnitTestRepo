@@ -36,8 +36,8 @@ jobs:
         path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPodAPP-aixaeyjiavyyshfgxjwdsrcmncun/Logs/Test/*.xcresult
 
     - name: Pull request
-        if: ${{ github.event_name == 'pull_request' }}
-        run: echo "Pull request"
+      if: ${{ github.event_name == 'pull_request' }}
+      run: echo "Pull request"
 
     - name: Create keychain
       if: ${{ github.event_name == 'push' }}
