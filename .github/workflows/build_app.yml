@@ -62,6 +62,7 @@ jobs:
       env:
         FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        GROUPS_LIST: ${{ secrets.GROUPS_LIST }}
       run: ./scripts/firebase_upload.sh
 
 
