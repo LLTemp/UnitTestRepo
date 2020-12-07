@@ -42,7 +42,7 @@ jobs:
         path: /Users/runner/Library/Developer/Xcode/DerivedData/UnitTestWithPodAPP-aixaeyjiavyyshfgxjwdsrcmncun/Logs/Test/*.xcresult
 
     - name: Create keychain
-      if: ${{ contains($commitmsg, 'upload_source') == 'true' && github.event_name == 'push'}}
+      if: contains(env.commitmsg, 'upload_source')
       env:
         P12_SECRET: ${{ secrets.P12_SECRET }}
       run: ./scripts/add-key.sh
