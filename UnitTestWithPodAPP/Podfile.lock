@@ -1,6 +1,6 @@
 PODS:
   - KeychainSwift (19.0.0)
-  - UnitTestWithPod (1.0.81):
+  - UnitTestWithPod (1.0.98):
     - KeychainSwift (~> 19.0)
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
-  UnitTestWithPod: e5c5d1f6215d1ce01abd45de3c0b2f663d373908
+  UnitTestWithPod: 25f36b78ae1a2ca02f5b8fb05f83fa415ef48d88
 
 PODFILE CHECKSUM: 504dd8d9881b46f7e8796c69075b6b1435c24b90
 
