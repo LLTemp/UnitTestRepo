@@ -1,12 +1,14 @@
 UnitTestWithPod/Pods/
 UnitTestWithPod/build/
 UnitTestWithPod/.idea/
+UnitTestWithPod/VERSION
 UnitTestWithPod/UnitTestWithPod.framework/
 UnitTestWithPod/UnitTestWithPod.xcworkspace/xcuserdata/
 
 UnitTestWithPodApp/.idea/
 UnitTestWithPodApp/Pods/
 UnitTestWithPodApp/build/
+UnitTestWithPodApp/VERSION
 UnitTestWithPodApp/UnitTestWithPodAPP.xcworkspace/xcuserdata/
 
 

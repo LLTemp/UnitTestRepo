@@ -21,7 +21,14 @@ jobs:
     runs-on: macos-10.15
 
     steps:
+    - name: 'checkout'
     - uses: actions/checkout@v2
+    - with:
+        fetch-depth: 0
+
+    - name: 'calculate versions'
+      working-directory: ./
+      run: 'node projectsVersions.js'
 
     # TODO Cache dependencies
     - name: Pod install
