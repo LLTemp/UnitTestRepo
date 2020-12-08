@@ -21,12 +21,12 @@ jobs:
     runs-on: macos-10.15
 
     steps:
-    - name: 'checkout'
+    - name: Checkout
     - uses: actions/checkout@v2
     - with:
         fetch-depth: 0
 
-    - name: 'calculate versions'
+    - name: Calculate versions
       working-directory: ./
       run: 'node projectsVersions.js'
 
