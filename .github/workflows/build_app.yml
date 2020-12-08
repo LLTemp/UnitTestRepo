@@ -39,7 +39,9 @@ jobs:
 
 ############## Installing dependencies
     - name: Pod install
-      run: pod install
+      run: |
+        rm Podfile.lock
+        pod install
 
 
 ############## Testing application
