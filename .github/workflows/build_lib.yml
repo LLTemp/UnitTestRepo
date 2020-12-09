@@ -30,6 +30,11 @@ jobs:
       working-directory: ./
       run: 'node projectsVersions.js'
 
+    - name: Print versions
+      run: |
+        version=$(<VERSION)
+        echo "Version = $version"
+
     # TODO Cache dependencies
     - name: Pod install
       run: pod install

@@ -6,7 +6,7 @@ target 'UnitTestWithPodAPP' do
   use_frameworks!
   
   # Pods for UnitTestWithPodAPP
-  pod 'UnitTestWithPod', :podspec => 'https://raw.githubusercontent.com/LLTemp/test_sic_zip/main/UnitTestWithPod.podspec'
+  pod 'UnitTestWithPod', :podspec => 'https://raw.githubusercontent.com/LLTemp/test_sic_zip/main/1.2.1/UnitTestWithPod.podspec'
   
   # add pods for desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
