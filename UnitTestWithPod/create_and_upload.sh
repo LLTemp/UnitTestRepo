@@ -29,8 +29,9 @@ sed -E -i '' -e "s#spec.source.*#spec.source = { :http => \"https://github.com/L
 echo "Upload SDK"
 rm -rf test_sic_zip
 git clone https://github.com/LLTemp/test_sic_zip.git
-mv "${sdkName}" test_sic_zip
-cp UnitTestWithPod.podspec test_sic_zip
+mkdir "./test_sic_zip/$version"
+mv "${sdkName}" "./test_sic_zip/$version"
+cp UnitTestWithPod.podspec "./test_sic_zip/$version"
 cd test_sic_zip
 ls -la
 git add .
