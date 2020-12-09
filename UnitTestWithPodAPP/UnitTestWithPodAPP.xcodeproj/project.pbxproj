@@ -18,7 +18,6 @@
 		A555D9552578F1080019E1AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A555D9542578F1080019E1AE /* GoogleService-Info.plist */; };
 		A555DAB3257E214B0019E1AE /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = A555DAB2257E214B0019E1AE /* exportOptions.plist */; };
 		CA01F265E0DD3F4032478DF8 /* sign_and_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = CA01F5AE66B7FA2EC9D2ADAC /* sign_and_upload.sh */; };
-		CA01F5069D614588B31EB792 /* firebase_upload.sh in Resources */ = {isa = PBXBuildFile; fileRef = CA01FD394AEFD4DDEF699567 /* firebase_upload.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		B2AE927F8A147938373E8E5B /* Pods-UnitTestWithPodAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPodAPP.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPodAPP/Pods-UnitTestWithPodAPP.debug.xcconfig"; sourceTree = "<group>"; };
 		C311ACED5FCB2B4FF422AB53 /* Pods-UnitTestWithPodAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPodAPP.release.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPodAPP/Pods-UnitTestWithPodAPP.release.xcconfig"; sourceTree = "<group>"; };
 		CA01F5AE66B7FA2EC9D2ADAC /* sign_and_upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = sign_and_upload.sh; path = scripts/sign_and_upload.sh; sourceTree = "<group>"; };
-		CA01FD394AEFD4DDEF699567 /* firebase_upload.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = firebase_upload.sh; path = scripts/firebase_upload.sh; sourceTree = "<group>"; };
 		CA01FEB79D6BC49F8CB2A1EF /* exportOptions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; name = exportOptions.plist; path = UnitTestWithPodAPP/exportOptions.plist; sourceTree = "<group>"; };
 		D14A8B6B37D10A8BD5D2FD51 /* Pods_UnitTestWithPodAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestWithPodAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,7 +88,6 @@
 				A54659F825666749003FA51D /* Products */,
 				FF05274D34EDA96F13738D9C /* Pods */,
 				019D6D97C3997A03F3A00616 /* Frameworks */,
-				CA01FD394AEFD4DDEF699567 /* firebase_upload.sh */,
 				CA01F5AE66B7FA2EC9D2ADAC /* sign_and_upload.sh */,
 			);
 			sourceTree = "<group>";
@@ -225,7 +222,6 @@
 				A555D9552578F1080019E1AE /* GoogleService-Info.plist in Resources */,
 				A5465A042566674A003FA51D /* Assets.xcassets in Resources */,
 				A5465A0225666749003FA51D /* Main.storyboard in Resources */,
-				CA01F5069D614588B31EB792 /* firebase_upload.sh in Resources */,
 				CA01F265E0DD3F4032478DF8 /* sign_and_upload.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
