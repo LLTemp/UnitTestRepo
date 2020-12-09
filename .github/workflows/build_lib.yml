@@ -50,22 +50,6 @@ jobs:
         push_token: ${{ secrets.PUSH_TOKEN }}
       run: ./create_and_upload.sh
 
-
-#    - name: Create framework
-#      if: ${{ github.event_name == 'push' }}
-#      run: xcodebuild -workspace ./UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
-#
-#    - name: zip_sdk
-#      if: ${{ github.event_name == 'push' }}
-#      run: zip -r ./UnitTestWithPod.framework.zip ./UnitTestWithPod.framework
-#
-#    - name: Upload
-#      if: ${{ github.event_name == 'push' }}
-#      env:
-#        push_token: ${{ secrets.PUSH_TOKEN }}
-#      run: ./upload.sh
-
-
 #####   DO not remove. For test purposes #####
 #    - name: Save framework ZIP
 #      if: ${{ always() }}

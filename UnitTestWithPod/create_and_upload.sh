@@ -22,8 +22,7 @@ version=$(<VERSION)
 echo "Version = $version"
 /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $version" "./UnitTestWithPod/Info.plist"
 sed -E -i '' -e "s/[0-9]{1,}.[0-9]{1,}.[0-9]{1,}/${version}/" UnitTestWithPod.podspec
-sed -E -i '' -e "s#spec.source.*#spec.source = { :http => \"https://github.com/LLTemp/test_sic_zip/raw/main/$sdkName\" }#g" UnitTestWithPod.podspec
-
+sed -E -i '' -e "s#spec.source.*#spec.source = { :http => \"https://github.com/LLTemp/test_sic_zip/raw/main/$version/$sdkName\" }#g" UnitTestWithPod.podspec
 
 ###################################
 echo "Upload SDK"
