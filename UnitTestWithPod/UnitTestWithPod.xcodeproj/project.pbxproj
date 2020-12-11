@@ -38,6 +38,8 @@
 		A56766A52577886F008DED60 /* openssl in Headers */ = {isa = PBXBuildFile; fileRef = A567669E25778868008DED60 /* openssl */; settings = {ATTRIBUTES = (Public, ); }; };
 		A567671A25778BA7008DED60 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A56766FC25778B00008DED60 /* libcrypto.a */; };
 		A567671F25778BC6008DED60 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A567670225778B0D008DED60 /* libssl.a */; };
+		A58DC78025826E8500E4A6EF /* SIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58DC77F25826E8500E4A6EF /* SIC.swift */; };
+		A58DC7AF25836F3300E4A6EF /* GoogleService-Info-SDK.plist in Resources */ = {isa = PBXBuildFile; fileRef = A58DC7AE25836F3300E4A6EF /* GoogleService-Info-SDK.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		A567669E25778868008DED60 /* openssl */ = {isa = PBXFileReference; lastKnownFileType = folder; path = openssl; sourceTree = "<group>"; };
 		A56766FC25778B00008DED60 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = UnitTestWithPod/ossl/lib/libcrypto.a; sourceTree = "<group>"; };
 		A567670225778B0D008DED60 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = UnitTestWithPod/ossl/lib/libssl.a; sourceTree = "<group>"; };
+		A58DC77F25826E8500E4A6EF /* SIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIC.swift; sourceTree = "<group>"; };
+		A58DC7AE25836F3300E4A6EF /* GoogleService-Info-SDK.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-SDK.plist"; sourceTree = "<group>"; };
 		B607166D100F934C5278D0D6 /* Pods-UnitTestWithPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod/Pods-UnitTestWithPod.debug.xcconfig"; sourceTree = "<group>"; };
 		F3976ED29797B67A95D18206 /* Pods_UnitTestWithPod_UnitTestWithPodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestWithPod_UnitTestWithPodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD0939CF8592E5A04A9AE27F /* Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod-UnitTestWithPodTests/Pods-UnitTestWithPod-UnitTestWithPodTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,8 +150,10 @@
 				A567669C25778839008DED60 /* ossl */,
 				A567665925778388008DED60 /* UnitTestWithPod.modulemap */,
 				A546597C25657F96003FA51D /* UnitTestWithPod.h */,
+				A58DC7AE25836F3300E4A6EF /* GoogleService-Info-SDK.plist */,
 				A546597D25657F96003FA51D /* Info.plist */,
 				A546599E25658073003FA51D /* HelloLib.swift */,
+				A58DC77F25826E8500E4A6EF /* SIC.swift */,
 			);
 			path = UnitTestWithPod;
 			sourceTree = "<group>";
@@ -333,6 +339,7 @@
 			files = (
 				A567669F25778868008DED60 /* lib in Resources */,
 				A56766A025778868008DED60 /* openssl in Resources */,
+				A58DC7AF25836F3300E4A6EF /* GoogleService-Info-SDK.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A546599F25658073003FA51D /* HelloLib.swift in Sources */,
+				A58DC78025826E8500E4A6EF /* SIC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
