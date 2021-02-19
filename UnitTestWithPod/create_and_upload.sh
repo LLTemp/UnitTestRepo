@@ -23,6 +23,7 @@ echo "Build SDK"
 xcodebuild -workspace ./UnitTestWithPod.xcworkspace -scheme UniversalSim-Arm64-X86_64 ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
 
 
+
 ###################################
 echo "Zip SDK"
 zip -r "./${SDK_NAME}.zip" ./${SDK_NAME}
