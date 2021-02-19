@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import UnitTestWithPod
 
 class ViewController: UIViewController {
 

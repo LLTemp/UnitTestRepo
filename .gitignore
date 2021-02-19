@@ -1,9 +1,11 @@
 UnitTestWithPod/Pods/
 UnitTestWithPod/build/
+UnitTestWithPod/archive/
 UnitTestWithPod/.idea/
 UnitTestWithPod/VERSION
 UnitTestWithPod/test_sic_zip/
-UnitTestWithPod/UnitTestWithPod.framework/
+UnitTestWithPod/UnitTestWithPod.framework
+UnitTestWithPod/UnitTestWithPod.framework.zip
 UnitTestWithPod/UnitTestWithPod.xcworkspace/xcuserdata/
 
 UnitTestWithPodApp/.idea/

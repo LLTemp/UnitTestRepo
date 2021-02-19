@@ -1,40 +1,50 @@
 #!/bin/sh
 
-###################################
+
+##################################
+echo "Set environment variables"
+SDK_NAME="UnitTestWithPod.framework"
+VERSION=$(<VERSION)
+ARTEFACT="$SDK_NAME"
+BUCKET="testbuildartefacts"
+ARTEFACT_NAME="sic-sdk-ios/${VERSION}/${SDK_NAME}.zip"
+AWS_DEFAULT_REGION="us-east-2"
+
+echo "Sdk name = ${SDK_NAME}"
+echo "Version = $VERSION"
+echo "Artefact = $ARTEFACT"
+echo "Bucket = $BUCKET"
+echo "Artefact name = $ARTEFACT_NAME"
+echo "Default region = $AWS_DEFAULT_REGION"
+
+
+##################################
 echo "Build SDK"
-xcodebuild -workspace ./UnitTestWithPod.xcworkspace -scheme Universal ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
+xcodebuild -workspace ./UnitTestWithPod.xcworkspace -scheme UniversalSim-Arm64-X86_64 ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
 
 
 ###################################
-echo "Get SDK semantic version"
-version=$(<VERSION)
-sdkName="UnitTestWithPod-${version}.framework.zip"
-echo "Sdk name = ${sdkName}"
+echo "Zip SDK"
+zip -r "./${SDK_NAME}.zip" ./${SDK_NAME}
 
 
 ###################################
-echo "Zip ADK"
-zip -r "./${sdkName}" ./UnitTestWithPod.framework
+echo "Update VERSIONs"
+/usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSION" "./UnitTestWithPod/Info.plist"
+sed -E -i '' -e "s/[0-9]{1,}.[0-9]{1,}.[0-9]{1,}/${VERSION}/" UnitTestWithPod.podspec
+sed -E -i '' -e "s#spec.source.*#spec.source = { :http => \"https://${BUCKET}.s3.${AWS_DEFAULT_REGION}.amazonaws.com/${ARTEFACT_NAME}\" }#g" UnitTestWithPod.podspec
+
+# variable to get region AWS_DEFAULT_REGION
+# eu-central-1
 
 ###################################
-echo "Update versions"
-version=$(<VERSION)
-echo "Version = $version"
-/usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $version" "./UnitTestWithPod/Info.plist"
-sed -E -i '' -e "s/[0-9]{1,}.[0-9]{1,}.[0-9]{1,}/${version}/" UnitTestWithPod.podspec
-sed -E -i '' -e "s#spec.source.*#spec.source = { :http => \"https://github.com/LLTemp/test_sic_zip/raw/main/$version/$sdkName\" }#g" UnitTestWithPod.podspec
+echo "Deploy SDK"
 
-###################################
-echo "Upload SDK"
-rm -rf test_sic_zip
-git clone https://github.com/LLTemp/test_sic_zip.git
-mkdir "./test_sic_zip/$version"
-mv "${sdkName}" "./test_sic_zip/$version"
-cp UnitTestWithPod.podspec "./test_sic_zip/$version"
-cd test_sic_zip
-ls -la
-git add .
-git commit -m "Version $sdkName"
-git tag "SDK_IOS_$sdkName"
-git status
-git push https://LLTemp:$push_token@github.com/LLTemp/test_sic_zip.git
+md5=`/usr/bin/openssl dgst -md5 -binary "${ARTEFACT}.zip" | /usr/bin/openssl enc -base64`
+echo "Deploying to $BUCKET/${ARTEFACT_NAME} Md5 = ${md5}"
+
+aws s3api put-object \
+  --bucket "$BUCKET" \
+  --key "${ARTEFACT_NAME}" \
+  --body "${PWD}/${ARTEFACT}.zip" \
+  --content-md5 "$md5"

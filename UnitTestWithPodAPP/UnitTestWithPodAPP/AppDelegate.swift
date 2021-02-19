@@ -6,26 +6,29 @@
 //
 
 import UIKit
-import Firebase
 import UnitTestWithPod
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
-        Messaging.messaging().delegate = self
         application.registerForRemoteNotifications()
+        
+        HelloLib.shared.helloWorld()
+        print("\(HelloLib.shared.md5())")
+        
         
         // configure SIC firebase
         //HelloLib.shared.configure(application: application)
-        HelloLib.shared.newOne()
+        
         return true
     }
 
     // MARK: UISceneSession Lifecycle
 
+    
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
@@ -57,19 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         completionHandler(.newData)
-    }
-}
-
-// update Firebase token to server
-extension AppDelegate: MessagingDelegate {
-    public func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?){
-        // todo detect that token from SDK config file
-        if let fcmToken = fcmToken {
-            //todo send to server
-            print("SDK fcmToken = \(fcmToken)")
-        } else {
-            print("SDK fcmToken is empty!!!!")
-        }
     }
 }
 
