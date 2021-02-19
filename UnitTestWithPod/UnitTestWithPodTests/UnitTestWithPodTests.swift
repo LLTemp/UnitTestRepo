@@ -23,13 +23,7 @@ class UnitTestWithPodTests: XCTestCase {
         //let res = HelloLib.returnZero()
         XCTAssert(res == 0)
     }
-    
-    func testSetGet() throws {
-        HelloLib.shared.saveString(key: "key", value: "1")
-        let res = HelloLib.shared.getString(key: "key")
-        XCTAssert(res == "1")
-    }
-    
+
     func testOpenSSLFunc() throws {
         let md5 = HelloLib.shared.md5()
         XCTAssert(md5 == "5d41402abc4b2a76b9719d911017c592")
