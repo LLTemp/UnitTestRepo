@@ -4,7 +4,7 @@
 ##################################
 echo "Set environment variables"
 PODSPEC_NAME="UnitTestWithPod.podspec"
-SDK_NAME="UnitTestWithPod.framework"
+SDK_NAME="UnitTestWithPod.xcframework"
 VERSION=$(<VERSION)
 ARTEFACT="$SDK_NAME"
 BUCKET="testbuildartefacts"
@@ -23,18 +23,21 @@ echo "Default region = $AWS_DEFAULT_REGION"
 
 ##################################
 echo "Build SDK"
-xcodebuild -workspace ./UnitTestWithPod.xcworkspace -scheme UniversalSim-Arm64-X86_64 ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
+#xcodebuild -workspace ./UnitTestWithPod.xcworkspace -scheme UniversalSim-Arm64-X86_64 ONLY_ACTIVE_ARCH=YES CODE_SIGN_REQUIRE=NO
 
 
 ###################################
 echo "Zip SDK"
-zip -r "./${SDK_NAME}.zip" ./${SDK_NAME}
+cd ./build/
+zip -r "../${SDK_NAME}.zip" ./UnitTestWithPod.xcframework || exit 2
+cd ..
 
 
-###################################
+
+##################################
 echo "Update VERSIONs"
 /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSION" "./UnitTestWithPod/Info.plist"
-sed -E -i '' -e "s/[0-9]{1,}.[0-9]{1,}.[0-9]{1,}/${VERSION}/" "${PODSPEC_NAME}"
+sed -E -i '' -e "s#spec.version.*#spec.version = \"${VERSION}\"#g" "${PODSPEC_NAME}"
 
 
 ###################################

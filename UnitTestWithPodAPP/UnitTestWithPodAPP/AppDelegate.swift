@@ -7,7 +7,6 @@
 
 import UIKit
 import UnitTestWithPod
-import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
