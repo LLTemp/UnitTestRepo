@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
     spec.license      = "MIT"
     spec.author       = { "SergeyBrazhnik" => "sergey.brazhnik@ledgerleopard.com" }
     spec.platform     = :ios, "14.0"
-    spec.source = { :http => "https://testbuildartefacts.s3.us-east-2.amazonaws.com/sic-sdk-ios/1.2.1/UnitTestWithPod.framework.zip" }
+    spec.source = { :http => "[REPLACE_ME]" }
     spec.vendored_frameworks = 'UnitTestWithPod.framework'
     spec.vendored_libraries = 'UnitTestWithPod.framework/lib'
     spec.header_mappings_dir = 'UnitTestWithPod.framework/openssl'

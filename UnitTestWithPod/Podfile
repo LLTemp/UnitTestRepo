@@ -1,7 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '14.0'
 source 'https://cdn.cocoapods.org/'
-$grpcVersion = '1.0.0'
 
 target 'UnitTestWithPod' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -9,7 +8,7 @@ target 'UnitTestWithPod' do
 
   # Pods for UnitTestWithPod
   pod 'KeychainSwift'
-  pod 'gRPC-Swift', $grpcVersion
+  pod 'gRPC-Swift', '1.0.0'
 
 end
 
