@@ -1,44 +1,51 @@
 platform :ios, '14.0'
 source 'https://cdn.cocoapods.org/'
 
-# require 'fileutils'
-# FileUtils.remove_dir('SDK')
-# FileUtils.mkdir 'SDK'
-#
-# ############################
-# puts "Set environment variables"
-# BUCKET='testbuildartefacts'
-# PODSPEC_NAME='UnitTestWithPod.podspec'
-# SDK_NAME='UnitTestWithPod.framework'
-# VERSION='1.2.2'
-# BINARY_ARTEFACT_NAME="sic-sdk-ios/#{VERSION}/#{SDK_NAME}.zip"
-# PODSPEC_ARTEFACT_NAME="sic-sdk-ios/#{VERSION}/#{PODSPEC_NAME}"
-#
-# ############################
-# puts 'Download SDK podspec'
-# download_podspec=`aws s3api get-object --bucket #{BUCKET} --key #{PODSPEC_ARTEFACT_NAME} ./SDK/#{PODSPEC_NAME}`
-#
-# ###########################
-# puts 'Generate signed link'
-# PRESIGNED_BINARY_URL=`aws s3 presign s3://#{BUCKET}/#{BINARY_ARTEFACT_NAME}`
-# puts PRESIGNED_BINARY_URL
-#
-# ##########################
-# puts 'Past downloadable link'
-# filename = "#{Dir.pwd}/SDK/#{PODSPEC_NAME}"
-# text = File.read(filename)
-# content=text.gsub! '[REPLACE_ME]', PRESIGNED_BINARY_URL
-# File.open(filename, "w") { |file| file << content }
+require 'fileutils'
+FileUtils.remove_dir('SDK', true)
+FileUtils.mkdir 'SDK'
 
+############################
+puts "Set environment variables"
+BUCKET='testbuildartefacts'
+PODSPEC_NAME='UnitTestWithPod.podspec'
+SDK_NAME='UnitTestWithPod.xcframework'
+VERSION='1.2.3'
+BINARY_ARTEFACT_NAME="sic-sdk-ios/#{VERSION}/#{SDK_NAME}.zip"
+PODSPEC_ARTEFACT_NAME="sic-sdk-ios/#{VERSION}/#{PODSPEC_NAME}"
+
+############################
+puts 'Download SDK podspec'
+download_podspec=`aws s3api get-object --bucket #{BUCKET} --key #{PODSPEC_ARTEFACT_NAME} ./SDK/#{PODSPEC_NAME}`
+
+###########################
+puts 'Generate signed link'
+PRESIGNED_BINARY_URL=`aws s3 presign s3://#{BUCKET}/#{BINARY_ARTEFACT_NAME}`
+puts PRESIGNED_BINARY_URL
+
+##########################
+puts 'Past downloadable link'
+filename = "#{Dir.pwd}/SDK/#{PODSPEC_NAME}"
+text = File.read(filename)
+content=text.gsub! '[REPLACE_ME]', PRESIGNED_BINARY_URL
+File.open(filename, "w") { |file| file << content }
+
+############################
+puts 'Download *.xcframework'
+download_bnary=`aws s3api get-object --bucket #{BUCKET} --key #{BINARY_ARTEFACT_NAME} ./SDK/#{SDK_NAME}.zip`
+
+############################
+puts 'Unzip *.xcframework'
+unzip=`unzip ./SDK/#{SDK_NAME}.zip -d ./SDK`
 
 
 target 'UnitTestWithPodAPP' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  
+
   # Pods for UnitTestWithPodAPP
-  # pod 'UnitTestWithPod', :path => './SDK'
-  pod 'UnitTestWithPod', :path => '../UnitTestWithPod/'
+  pod 'UnitTestWithPod', :path => './SDK'
+
   #pod 'Firebase/Messaging'
 
 end

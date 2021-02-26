@@ -43,7 +43,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		3247D45D4D9AA3DF9D6528A9 /* Pods_UnitTestWithPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C9BE862ED06A52FE20CA20 /* Pods_UnitTestWithPod.framework */; };
 		59EC974AF5533B942F37D929 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EC9FFD631A7E6D21F31B99 /* libssl.a */; };
 		59EC97568E1424C593FE2492 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EC9ECDDC42E14AA297A3D7 /* libcrypto.a */; };
 		59EC9A5867704E7993A5D0A0 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EC95949EEAC794882E8F0B /* libssl.a */; };
@@ -65,6 +64,7 @@
 		A567671F25778BC6008DED60 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A567670225778B0D008DED60 /* libssl.a */; };
 		A58DC78025826E8500E4A6EF /* SIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58DC77F25826E8500E4A6EF /* SIC.swift */; };
 		A58DC7AF25836F3300E4A6EF /* GoogleService-Info-SDK.plist in Resources */ = {isa = PBXBuildFile; fileRef = A58DC7AE25836F3300E4A6EF /* GoogleService-Info-SDK.plist */; };
+		E466C3E2B1A313A62F636BE1 /* Pods_UnitTestWithPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41080271CD8BDE955DE5B72 /* Pods_UnitTestWithPod.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,11 +85,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2B2F35960AF60CB9EC4A568D /* Pods-UnitTestWithPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod/Pods-UnitTestWithPod.debug.xcconfig"; sourceTree = "<group>"; };
 		59EC95949EEAC794882E8F0B /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		59EC9D1B3656A285DBB24A18 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		59EC9ECDDC42E14AA297A3D7 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		59EC9FFD631A7E6D21F31B99 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		654506120E81142EA262FAC3 /* Pods-UnitTestWithPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod.release.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod/Pods-UnitTestWithPod.release.xcconfig"; sourceTree = "<group>"; };
+		7EB628AA16CFC77A552FC9E6 /* Pods-UnitTestWithPod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod.debug.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod/Pods-UnitTestWithPod.debug.xcconfig"; sourceTree = "<group>"; };
+		A41080271CD8BDE955DE5B72 /* Pods_UnitTestWithPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestWithPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A546597925657F96003FA51D /* UnitTestWithPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnitTestWithPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A546597C25657F96003FA51D /* UnitTestWithPod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitTestWithPod.h; sourceTree = "<group>"; };
 		A546597D25657F96003FA51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,8 +116,6 @@
 		A567670225778B0D008DED60 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = UnitTestWithPod/ossl/lib/libssl.a; sourceTree = "<group>"; };
 		A58DC77F25826E8500E4A6EF /* SIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIC.swift; sourceTree = "<group>"; };
 		A58DC7AE25836F3300E4A6EF /* GoogleService-Info-SDK.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-SDK.plist"; sourceTree = "<group>"; };
-		C8D71C913E193C12BB709B12 /* Pods-UnitTestWithPod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitTestWithPod.release.xcconfig"; path = "Target Support Files/Pods-UnitTestWithPod/Pods-UnitTestWithPod.release.xcconfig"; sourceTree = "<group>"; };
-		D5C9BE862ED06A52FE20CA20 /* Pods_UnitTestWithPod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnitTestWithPod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 				59EC9BE7BEEEC3970497C345 /* libcrypto.a in Frameworks */,
 				59EC974AF5533B942F37D929 /* libssl.a in Frameworks */,
 				59EC97568E1424C593FE2492 /* libcrypto.a in Frameworks */,
-				3247D45D4D9AA3DF9D6528A9 /* Pods_UnitTestWithPod.framework in Frameworks */,
+				E466C3E2B1A313A62F636BE1 /* Pods_UnitTestWithPod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +246,7 @@
 				A555D88B2577C2ED0019E1AE /* KeychainSwift.framework */,
 				A567670225778B0D008DED60 /* libssl.a */,
 				A56766FC25778B00008DED60 /* libcrypto.a */,
-				D5C9BE862ED06A52FE20CA20 /* Pods_UnitTestWithPod.framework */,
+				A41080271CD8BDE955DE5B72 /* Pods_UnitTestWithPod.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -254,8 +254,8 @@
 		AEEA1F789DAAE7269CF380CE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2B2F35960AF60CB9EC4A568D /* Pods-UnitTestWithPod.debug.xcconfig */,
-				C8D71C913E193C12BB709B12 /* Pods-UnitTestWithPod.release.xcconfig */,
+				7EB628AA16CFC77A552FC9E6 /* Pods-UnitTestWithPod.debug.xcconfig */,
+				654506120E81142EA262FAC3 /* Pods-UnitTestWithPod.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A546598D25657F96003FA51D /* Build configuration list for PBXNativeTarget "UnitTestWithPod" */;
 			buildPhases = (
-				EF4C8666C366DE99AD2BD439 /* [CP] Check Pods Manifest.lock */,
+				14644B4DAC2ED608628FD790 /* [CP] Check Pods Manifest.lock */,
 				A546597425657F96003FA51D /* Headers */,
 				A546597525657F96003FA51D /* Sources */,
 				A546597625657F96003FA51D /* Frameworks */,
@@ -412,6 +412,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		14644B4DAC2ED608628FD790 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UnitTestWithPod-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		40451B2025DBBA9F0059D173 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,28 +484,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Set bash script to exit immediately if any commands fail.\nset -e\n# Setup some constants for use later on.\nFRAMEWORK_NAME=\"UnitTestWithPod\"\nOUTPUT_DIR=\"${SRCROOT}/build\"\n\necho ${OUTPUT_DIR}\n\n# If remains from a previous build exist,delete them.\nif [ -d \"${OUTPUT_DIR}\" ]; then\nrm -rf \"${OUTPUT_DIR}\"\nfi\n\n# Build the framework for device and for simulator.\necho \"Building for device\"\nxcodebuild -workspace ./${FRAMEWORK_NAME}.xcworkspace -scheme ${FRAMEWORK_NAME} -configuration Release -arch arm64 defines_module=yes -sdk \"iphoneos\" -derivedDataPath \"${OUTPUT_DIR}\" CODE_SIGN_IDENTITY=\"\"  OTHERCFLAGS=\"-fembed-bitcode\" \n\necho \"Building for Simulator x86_64\"\nxcodebuild -workspace ./${FRAMEWORK_NAME}.xcworkspace -scheme ${FRAMEWORK_NAME} -configuration Release -arch x86_64 defines_module=yes -sdk \"iphonesimulator\" -derivedDataPath \"${OUTPUT_DIR}\" CODE_SIGN_IDENTITY=\"\"  OTHERCFLAGS=\"-fembed-bitcode\"\n\n# Remove .framework file if exists from previous run.\nif [ -d \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\" ]; then\nrm -rf \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\nfi\n# Copy the device version of framework.\ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\"\n# Merging the device and simulator frameworks' executables with \n# lipo.\nlipo -create -output \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\" \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/${FRAMEWORK_NAME}\"\n# Copy Swift module mappings for simulator into the framework. \ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\ncp -r \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule/\" \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Modules/${FRAMEWORK_NAME}.swiftmodule\"\n\n# Create new combined simulator and device swift header file.\nCOMBINED_PATH=\"${BUILD_DIR}/iOS + iOS Simulator/${PROJECT_NAME}-Swift.h\"\nmkdir -p \"${BUILD_DIR}/iOS + iOS Simulator/\"\ntouch \"${COMBINED_PATH}\"\necho \"#ifndef TARGET_OS_SIMULATOR\\n#include <TargetConditionals.h>\\n#endif\\n#if TARGET_OS_SIMULATOR\" >> \"${COMBINED_PATH}\"\ncat \"${OUTPUT_DIR}/Build/Products/Release-iphonesimulator/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}-Swift.h\" >> \"${COMBINED_PATH}\"\necho \"#else\" >> \"${COMBINED_PATH}\"\necho \"//Start of iphoneos\" >> \"${COMBINED_PATH}\"\ncat \"${OUTPUT_DIR}/Build/Products/Release-iphoneos/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}-Swift.h\" >> \"${COMBINED_PATH}\"\necho \"#endif\" >> \"${COMBINED_PATH}\"\n# Overwrite generated -Swift.h file with combined -Swift.h file \ncat \"$COMBINED_PATH\" > \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework/Headers/${FRAMEWORK_NAME}-Swift.h\"\n#Optional Step to copy the framework to root folder\ncp -r \"${OUTPUT_DIR}/${FRAMEWORK_NAME}.framework\" \"${SRCROOT}\"\n\n";
-		};
-		EF4C8666C366DE99AD2BD439 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UnitTestWithPod-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -718,7 +718,7 @@
 		};
 		A546598E25657F96003FA51D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B2F35960AF60CB9EC4A568D /* Pods-UnitTestWithPod.debug.xcconfig */;
+			baseConfigurationReference = 7EB628AA16CFC77A552FC9E6 /* Pods-UnitTestWithPod.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				BITCODE_DENERATION_MODE = bitcode;
@@ -761,7 +761,7 @@
 		};
 		A546598F25657F96003FA51D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8D71C913E193C12BB709B12 /* Pods-UnitTestWithPod.release.xcconfig */;
+			baseConfigurationReference = 654506120E81142EA262FAC3 /* Pods-UnitTestWithPod.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				BITCODE_DENERATION_MODE = bitcode;
