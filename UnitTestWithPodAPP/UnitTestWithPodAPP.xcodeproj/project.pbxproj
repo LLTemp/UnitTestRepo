@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40E8D49625E95AB500B6CA2A /* SDKLib in Frameworks */ = {isa = PBXBuildFile; productRef = 40E8D49525E95AB500B6CA2A /* SDKLib */; };
 		518B761121A44EF2986B6FEA /* Pods_UnitTestWithPodAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B71A10FDF0A4E1F6584DE5 /* Pods_UnitTestWithPodAPP.framework */; };
 		A54659FB25666749003FA51D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54659FA25666749003FA51D /* AppDelegate.swift */; };
 		A54659FD25666749003FA51D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54659FC25666749003FA51D /* SceneDelegate.swift */; };
@@ -59,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				518B761121A44EF2986B6FEA /* Pods_UnitTestWithPodAPP.framework in Frameworks */,
+				40E8D49625E95AB500B6CA2A /* SDKLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,9 @@
 			dependencies = (
 			);
 			name = UnitTestWithPodAPP;
+			packageProductDependencies = (
+				40E8D49525E95AB500B6CA2A /* SDKLib */,
+			);
 			productName = UnitTestWithPodAPP;
 			productReference = A54659F725666749003FA51D /* UnitTestWithPodAPP.app */;
 			productType = "com.apple.product-type.application";
@@ -206,6 +211,9 @@
 				Base,
 			);
 			mainGroup = A54659EE25666749003FA51D;
+			packageReferences = (
+				40E8D49425E95AB500B6CA2A /* XCRemoteSwiftPackageReference "SPMLib" */,
+			);
 			productRefGroup = A54659F825666749003FA51D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -608,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40E8D49425E95AB500B6CA2A /* XCRemoteSwiftPackageReference "SPMLib" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LLTemp/SPMLib";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40E8D49525E95AB500B6CA2A /* SDKLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40E8D49425E95AB500B6CA2A /* XCRemoteSwiftPackageReference "SPMLib" */;
+			productName = SDKLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A54659EF25666749003FA51D /* Project object */;
 }

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SDKLib",
+        "repositoryURL": "https://github.com/LLTemp/SPMLib",
+        "state": {
+          "branch": null,
+          "revision": "0648beaea12c3bac48deac06999658201295e8e0",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

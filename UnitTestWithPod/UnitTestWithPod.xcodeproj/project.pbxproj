@@ -43,6 +43,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		40850A4D25EA71FF00713AF2 /* Pods_UnitTestWithPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41080271CD8BDE955DE5B72 /* Pods_UnitTestWithPod.framework */; };
+		40850A4E25EA71FF00713AF2 /* Pods_UnitTestWithPod.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A41080271CD8BDE955DE5B72 /* Pods_UnitTestWithPod.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		59EC974AF5533B942F37D929 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EC9FFD631A7E6D21F31B99 /* libssl.a */; };
 		59EC97568E1424C593FE2492 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EC9ECDDC42E14AA297A3D7 /* libcrypto.a */; };
 		59EC9A5867704E7993A5D0A0 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EC95949EEAC794882E8F0B /* libssl.a */; };
@@ -64,7 +66,6 @@
 		A567671F25778BC6008DED60 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A567670225778B0D008DED60 /* libssl.a */; };
 		A58DC78025826E8500E4A6EF /* SIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58DC77F25826E8500E4A6EF /* SIC.swift */; };
 		A58DC7AF25836F3300E4A6EF /* GoogleService-Info-SDK.plist in Resources */ = {isa = PBXBuildFile; fileRef = A58DC7AE25836F3300E4A6EF /* GoogleService-Info-SDK.plist */; };
-		E466C3E2B1A313A62F636BE1 /* Pods_UnitTestWithPod.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41080271CD8BDE955DE5B72 /* Pods_UnitTestWithPod.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,20 @@
 			remoteInfo = dummy;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40850A4F25EA71FF00713AF2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				40850A4E25EA71FF00713AF2 /* Pods_UnitTestWithPod.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		59EC95949EEAC794882E8F0B /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
@@ -127,9 +142,9 @@
 				A567671A25778BA7008DED60 /* libcrypto.a in Frameworks */,
 				59EC9A5867704E7993A5D0A0 /* libssl.a in Frameworks */,
 				59EC9BE7BEEEC3970497C345 /* libcrypto.a in Frameworks */,
+				40850A4D25EA71FF00713AF2 /* Pods_UnitTestWithPod.framework in Frameworks */,
 				59EC974AF5533B942F37D929 /* libssl.a in Frameworks */,
 				59EC97568E1424C593FE2492 /* libcrypto.a in Frameworks */,
-				E466C3E2B1A313A62F636BE1 /* Pods_UnitTestWithPod.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +299,7 @@
 				A546597525657F96003FA51D /* Sources */,
 				A546597625657F96003FA51D /* Frameworks */,
 				A546597725657F96003FA51D /* Resources */,
+				40850A4F25EA71FF00713AF2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
