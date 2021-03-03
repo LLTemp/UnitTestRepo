@@ -1,0 +1,38 @@
+name: SIC iOS SDK
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'UnitTestWithPodSpm/**'
+      - '.github/**'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'UnitTestWithPodSpm/**'
+      - '.github/**'
+
+defaults:
+  run:
+    working-directory: ./UnitTestWithPodSpm
+
+jobs:
+  build:
+    runs-on: macos-10.15
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - uses: actions/cache@v2
+      with:
+        path: |
+          ./SPMartifacts
+        key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-spm-
+
+    - name: Run build
+      run: xcodebuild -project ./UnitTestWithPodSpm.xcodeproj -scheme Binary -clonedSourcePackagesDirPath ./SPMartifacts

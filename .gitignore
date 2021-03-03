@@ -19,6 +19,8 @@ UnitTestWithPodApp/UnitTestWithPodAPP.xcworkspace/xcuserdata/
 
 UnitTestWithPodSpm/.idea/
 UnitTestWithPodSpm/build/
+UnitTestWithPodSpm/SPMartifacts/
+UnitTestWithPodSpm/UnitTestWithPodSpm.framework
 
 
 
