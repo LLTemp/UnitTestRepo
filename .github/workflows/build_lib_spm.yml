@@ -34,11 +34,14 @@ jobs:
 
     - uses: actions/cache@v2
       with:
-        path: |
-          "**/SPMartifacts"
+        path: $PWD/SPMartifacts
         key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
         restore-keys: |
           ${{ runner.os }}-spm-
 
+    - name: LS
+      run: |
+        ls -la
+    
     - name: Run build
       run: xcodebuild -project ./UnitTestWithPodSpm.xcodeproj -scheme Binary -clonedSourcePackagesDirPath ./SPMartifacts
