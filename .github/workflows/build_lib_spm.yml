@@ -35,7 +35,7 @@ jobs:
     - uses: actions/cache@v2
       with:
         path: |
-          "${PWD}/SPMartifacts"
+          "**/SPMartifacts"
         key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
         restore-keys: |
           ${{ runner.os }}-spm-
