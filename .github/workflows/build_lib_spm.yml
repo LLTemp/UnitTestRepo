@@ -34,7 +34,7 @@ jobs:
 
     - uses: actions/cache@v2
       with:
-        path: SPMartifacts
+        path: ./UnitTestWithPodSpm/SPMartifacts
         key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
         restore-keys: |
           ${{ runner.os }}-spm-
