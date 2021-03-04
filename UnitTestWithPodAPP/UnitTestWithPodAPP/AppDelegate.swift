@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import UnitTestWithPod
+import UnitTestWithPodSpm
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -15,7 +15,7 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.ledgerleopard.UnitTestWithPodAPP</key>
-		<string>UnitTestRepoAppAdHocCI</string>
+		<string>UnitTestWithPodAppAdHocCI</string>
 	</dict>
 </dict>
 </plist>
