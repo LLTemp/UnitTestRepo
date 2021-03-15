@@ -23,5 +23,8 @@ UnitTestWithPodSpm/SPMartifacts/
 UnitTestWithPodSpm/UnitTestWithPodSpm.framework
 
 
+.idea/
+
+
 
 *.DS_Store
