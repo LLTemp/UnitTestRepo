@@ -22,4 +22,10 @@ jobs:
     - name: Show commit message
       run: |
         echo "Commit message" $commitmsg
- 
+
+############## Calculate versions
+    - name: Condition
+      if: contains($commitmsg, 'zzz')
+      run: |
+        echo "Success condition"
+
