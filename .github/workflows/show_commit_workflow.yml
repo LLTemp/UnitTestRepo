@@ -1,0 +1,25 @@
+name: Show Comit message + condition
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    env:
+      commitmsg: ${{ github.event.head_commit.message }}
+    runs-on: macos-10.15
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+############## Calculate versions
+    - name: Show commit message
+      run: |
+        echo ${{commitmsg}}
+
