@@ -25,7 +25,7 @@ jobs:
 
 ############## Calculate versions
     - name: Condition
-      if: contains($commitmsg, 'zzz')
+      if: contains('$commitmsg', 'zzz')
       run: |
         echo "Success condition"
 
