@@ -24,6 +24,11 @@ jobs:
       run: |
         echo "Branch" $branch
 
+    - name: Condition on master
+      if: ${{ github.event_name == 'push' }} && if: contains(env.branch, 'master')
+      run: |
+        echo "Im on master"
+
 
 ############## Calculate versions
     - name: Show commit message
