@@ -25,7 +25,7 @@ jobs:
         echo "Branch" $branch
 
     - name: Condition on master
-      if: ${{ github.event_name == 'push' }} && if: contains(env.branch, 'master')
+      if: ${{ github.event_name == 'push' }} && contains(env.branch, 'master')
       run: |
         echo "Im on master"
 
